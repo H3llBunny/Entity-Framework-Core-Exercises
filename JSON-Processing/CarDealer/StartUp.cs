@@ -15,65 +15,65 @@ namespace CarDealer
         static void Main(string[] args)
         {
             var db = new CarDealerContext();
-            //db.Database.EnsureDeleted();
+            db.Database.EnsureDeleted();
             db.Database.EnsureCreated();
 
             //Import Suppliers
-            //var supplierJson = File.ReadAllText(@"..\..\..\Datasets\suppliers.json");
-            //Console.WriteLine(ImportSuppliers(db, supplierJson));
+            var supplierJson = File.ReadAllText(@"..\..\..\Datasets\suppliers.json");
+            Console.WriteLine(ImportSuppliers(db, supplierJson));
 
             //Import Parts
-            //var partsJson = File.ReadAllText(@"..\..\..\Datasets\parts.json");
-            //Console.WriteLine(ImportParts(db, partsJson));
+            var partsJson = File.ReadAllText(@"..\..\..\Datasets\parts.json");
+            Console.WriteLine(ImportParts(db, partsJson));
 
             //Import Cars
-            //var carsJson = File.ReadAllText(@"..\..\..\Datasets\cars.json");
-            //Console.WriteLine(ImportCars(db, carsJson));
+            var carsJson = File.ReadAllText(@"..\..\..\Datasets\cars.json");
+            Console.WriteLine(ImportCars(db, carsJson));
 
             //Import Customers
-            //var customersJson = File.ReadAllText(@"..\..\..\Datasets\customers.json");
-            //Console.WriteLine(ImportCustomers(db, customersJson));
+            var customersJson = File.ReadAllText(@"..\..\..\Datasets\customers.json");
+            Console.WriteLine(ImportCustomers(db, customersJson));
 
             //Import Sales
-            //var salesJson = File.ReadAllText(@"..\..\..\Datasets\sales.json");
-            //Console.WriteLine(ImportSales(db, salesJson));
+            var salesJson = File.ReadAllText(@"..\..\..\Datasets\sales.json");
+            Console.WriteLine(ImportSales(db, salesJson));
 
             // Import PartCars (there was none in the skeleton)
 
-            //var random = new Random();
+            var random = new Random();
 
-            //var partIds = db.Parts.Select(p => p.Id).Distinct().ToList();
-            //var carIds = db.Cars.Select(c => c.Id).Distinct().ToList();
+            var partIds = db.Parts.Select(p => p.Id).Distinct().ToList();
+            var carIds = db.Cars.Select(c => c.Id).Distinct().ToList();
 
-            //for (int i = 0; i < 200; i++)
-            //{
-            //    var randomPartId = partIds[random.Next(partIds.Count())];
-            //    var randomCarId = carIds[random.Next(carIds.Count())];
+            for (int i = 0; i < 200; i++)
+            {
+                var randomPartId = partIds[random.Next(partIds.Count())];
+                var randomCarId = carIds[random.Next(carIds.Count())];
 
-            //    var newPartCar = new PartCar
-            //    {
-            //        PartId = randomPartId,
-            //        CarId = randomCarId
-            //    };
+                var newPartCar = new PartCar
+                {
+                    PartId = randomPartId,
+                    CarId = randomCarId
+                };
 
-            //    db.PartCars.Add(newPartCar);
-            //    db.SaveChanges();
-            //}
+                db.PartCars.Add(newPartCar);
+                db.SaveChanges();
+            }
 
             // Export Ordered Customers
-            //File.WriteAllText(@"..\..\..\Datasets\exported-customers.json", GetOrderedCustomers(db));
+            File.WriteAllText(@"..\..\..\Datasets\exported-customers.json", GetOrderedCustomers(db));
 
             // Cars from Make Toyota
-            //File.WriteAllText(@"..\..\..\Datasets\exported-toyota-cars.json", GetCarsFromMakeToyota(db));
+            File.WriteAllText(@"..\..\..\Datasets\exported-toyota-cars.json", GetCarsFromMakeToyota(db));
 
             // Export Local Suppliers
-            //File.WriteAllText(@"..\..\..\Datasets\exported-local-suppliers.json", GetLocalSuppliers(db));
+            File.WriteAllText(@"..\..\..\Datasets\exported-local-suppliers.json", GetLocalSuppliers(db));
 
             // Export Cars with Their List of Parts
-            //File.WriteAllText(@"..\..\..\Datasets\exported-cars-with-partlist.json", GetCarsWithTheirListOfParts(db));
+            File.WriteAllText(@"..\..\..\Datasets\exported-cars-with-partlist.json", GetCarsWithTheirListOfParts(db));
 
             // Export Total Sales by Customer
-            //File.WriteAllText(@"..\..\..\Datasets\exported-total-sales-by-customer.json", GetTotalSalesByCustomer(db));
+            File.WriteAllText(@"..\..\..\Datasets\exported-total-sales-by-customer.json", GetTotalSalesByCustomer(db));
 
             // Export Sales with Applied Discount
             File.WriteAllText(@"..\..\..\Datasets\exported-sales-with-applied-discount.json", GetSalesWithAppliedDiscount(db));

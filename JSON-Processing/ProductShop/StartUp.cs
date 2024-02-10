@@ -11,33 +11,33 @@ namespace ProductShop
         static void Main(string[] args)
         {
             var db = new ProductShopContext();
-            //db.Database.EnsureDeleted();
+            db.Database.EnsureDeleted();
             db.Database.EnsureCreated();
 
-            //Import Users
-            //var usersJson = File.ReadAllText(@"..\..\..\Datasets\users.json");
-            //Console.WriteLine(ImportUsers(db, usersJson));
+            // Import Users
+            var usersJson = File.ReadAllText(@"..\..\..\Datasets\users.json");
+            Console.WriteLine(ImportUsers(db, usersJson));
 
-            //Import Products
-            //var productsJson = File.ReadAllText(@"..\..\..\Datasets\products.json");
-            //Console.WriteLine(ImportProducts(db, productsJson));
+            // Import Products
+            var productsJson = File.ReadAllText(@"..\..\..\Datasets\products.json");
+            Console.WriteLine(ImportProducts(db, productsJson));
 
-            //Import Categories
-            //var categoriesJson = File.ReadAllText(@"..\..\..\Datasets\categories.json");
-            //Console.WriteLine(ImportCategories(db, categoriesJson));
+            // Import Categories
+            var categoriesJson = File.ReadAllText(@"..\..\..\Datasets\categories.json");
+            Console.WriteLine(ImportCategories(db, categoriesJson));
 
-            //Import CategoriesProducts
-            //var categoriesProductsJson = File.ReadAllText(@"..\..\..\Datasets\categories-products.json");
-            //Console.WriteLine(ImportCategoryProducts(db, categoriesProductsJson));
+            // Import CategoriesProducts
+            var categoriesProductsJson = File.ReadAllText(@"..\..\..\Datasets\categories-products.json");
+            Console.WriteLine(ImportCategoryProducts(db, categoriesProductsJson));
 
-            //Export Products in Range
-            //File.WriteAllText(@"..\..\..\Datasets\exported-products.json", GetProductsInRange(db));
+            // Export Products in Range
+            File.WriteAllText(@"..\..\..\Datasets\exported-products.json", GetProductsInRange(db));
 
-            //Export Successfully Sold Products
-            //File.WriteAllText(@"..\..\..\Datasets\exported-users-with-sales.json", GetSoldProducts(db));
+            // Export Successfully Sold Products
+            File.WriteAllText(@"..\..\..\Datasets\exported-users-with-sales.json", GetSoldProducts(db));
 
-            //Categories by Products Count
-            //File.WriteAllText(@"..\..\..\Datasets\exported-categories-by-product-count.json", GetCategoriesByProductsCount(db));
+            // Categories by Products Count
+            File.WriteAllText(@"..\..\..\Datasets\exported-categories-by-product-count.json", GetCategoriesByProductsCount(db));
 
             //Export Users and Products
             File.WriteAllText(@"..\..\..\Datasets\users-with-products.json", GetUsersWithProducts(db));
