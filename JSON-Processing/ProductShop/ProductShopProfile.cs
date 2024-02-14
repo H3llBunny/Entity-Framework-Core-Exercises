@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using ProductShop.Dtos.Export;
-using ProductShop.Dtos.Import;
+using ProductShop.DTO.Export;
+using ProductShop.DTO.Import;
 using ProductShop.Models;
 
 namespace ProductShop

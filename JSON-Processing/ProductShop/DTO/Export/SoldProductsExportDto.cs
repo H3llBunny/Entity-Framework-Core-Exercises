@@ -1,4 +1,4 @@
-﻿namespace ProductShop.Dtos.Export
+﻿namespace ProductShop.DTO.Export
 {
     public class SoldProductsExportDto
     {

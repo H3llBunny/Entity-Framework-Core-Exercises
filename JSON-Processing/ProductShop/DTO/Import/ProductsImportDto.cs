@@ -1,4 +1,4 @@
-﻿namespace ProductShop.Dtos.Import
+﻿namespace ProductShop.DTO.Import
 {
     public class ProductsImportDto
     {
