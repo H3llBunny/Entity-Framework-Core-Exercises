@@ -1,8 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using ProductShop.Data;
+using ProductShop.Dtos.Export;
+using ProductShop.Dtos.Import;
 using ProductShop.Models;
-using System.Text.Json.Serialization;
 
 namespace ProductShop
 {
@@ -39,7 +42,7 @@ namespace ProductShop
             // Categories by Products Count
             File.WriteAllText(@"..\..\..\Datasets\exported-categories-by-product-count.json", GetCategoriesByProductsCount(db));
 
-            //Export Users and Products
+            // Export Users and Products
             File.WriteAllText(@"..\..\..\Datasets\users-with-products.json", GetUsersWithProducts(db));
         }
 
@@ -47,21 +50,22 @@ namespace ProductShop
         {
             try
             {
-                var setting = new JsonSerializerSettings
-                {
-                    Formatting = Formatting.Indented
-                };
+                var usersDto = JsonConvert.DeserializeObject<List<UsersImportDto>>(inputJson);
 
-                var usersToAdd = JsonConvert.DeserializeObject<List<User>>(inputJson, setting);
-
-                foreach (var user in usersToAdd)
+                var mapperConfig = new MapperConfiguration(cfg =>
                 {
-                    context.Users.Add(user);
-                }
+                    cfg.AddProfile<ProductShopProfile>();
+                });
+
+                var mapper = mapperConfig.CreateMapper();
+
+                var usersToAdd = mapper.Map<List<User>>(usersDto);
+
+                context.Users.AddRange(usersToAdd);
 
                 context.SaveChanges();
 
-                return $"Successfully imported {usersToAdd.Count}";
+                return $"Successfully imported {context.Users.Count()}";
             }
             catch (Exception ex)
             {
@@ -73,16 +77,22 @@ namespace ProductShop
         {
             try
             {
-                var productsToAdd = JsonConvert.DeserializeObject<List<Product>>(inputJson);
+                var productsDto = JsonConvert.DeserializeObject<List<ProductsImportDto>>(inputJson);
 
-                foreach (var product in productsToAdd)
+                var mapperConfig = new MapperConfiguration(cfg =>
                 {
-                    context.Products.Add(product);
-                }
+                    cfg.AddProfile<ProductShopProfile>();
+                });
+
+                var mapper = mapperConfig.CreateMapper();
+
+                var productsToAdd = mapper.Map<List<Product>>(productsDto);
+
+                context.Products.AddRange(productsToAdd);
 
                 context.SaveChanges();
 
-                return $"Successfully imported {productsToAdd.Count}";
+                return $"Successfully imported {context.Products.Count()}";
             }
             catch (Exception ex)
             {
@@ -94,16 +104,28 @@ namespace ProductShop
         {
             try
             {
-                var categoriesToAdd = JsonConvert.DeserializeObject<List<Category>>(inputJson);
+                var categoriesDto = JsonConvert.DeserializeObject<List<CategoriesImportDto>>(inputJson);
+
+                var mapperConfig = new MapperConfiguration(cfg =>
+                {
+                    cfg.AddProfile<ProductShopProfile>();
+                });
+
+                var mapper = mapperConfig.CreateMapper();
+
+                var categoriesToAdd = mapper.Map<List<Category>>(categoriesDto);
 
                 foreach (var category in categoriesToAdd)
                 {
-                    context.Categories.Add(category);
+                    if (category.Name != null)
+                    {
+                        context.Categories.Add(category);
+                    }
                 }
 
                 context.SaveChanges();
 
-                return $"Successfully imported {categoriesToAdd.Count}";
+                return $"Successfully imported {context.Categories.Count()}";
             }
             catch (Exception ex)
             {
@@ -115,16 +137,30 @@ namespace ProductShop
         {
             try
             {
-                var categoriesProductsToAdd = JsonConvert.DeserializeObject<List<CategoryProduct>>(inputJson);
+                var categoriesProductsDto = JsonConvert.DeserializeObject<List<CategoryProduct>>(inputJson);
+
+                var mapperConfig = new MapperConfiguration(cfg =>
+                {
+                    cfg.AddProfile<ProductShopProfile>();
+                });
+
+                var mapper = mapperConfig.CreateMapper();
+
+                var categoriesProductsToAdd = mapper.Map<List<CategoryProduct>>(categoriesProductsDto);
 
                 foreach (var categoryProduct in categoriesProductsToAdd)
                 {
-                    context.CategoryProducts.Add(categoryProduct);
+                    if (context.Categories.Any(c => c.Id == categoryProduct.CategoryId
+                    && context.Products.Any(p => p.Id == categoryProduct.ProductId)))
+                    {
+                        context.CategoryProducts.Add(categoryProduct);
+
+                    }
                 }
 
                 context.SaveChanges();
 
-                return $"Successfully imported {categoriesProductsToAdd.Count}";
+                return $"Successfully imported {context.CategoryProducts.Count()}";
             }
             catch (Exception ex)
             {
@@ -135,14 +171,19 @@ namespace ProductShop
         public static string GetProductsInRange(ProductShopContext context)
         {
             var productsInRange = context.Products
+                .Include(s => s.Seller)
                 .Where(p => p.Price >= 500 && p.Price <= 1000)
                 .OrderBy(p => p.Price)
-                .Select(x => new
-                {
-                    Name = x.Name,
-                    Price = x.Price,
-                    Seller = $"{x.Seller.FirstName} {x.Seller.LastName}"
-                }).ToList();
+                .ToList();
+
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<ProductShopProfile>();
+            });
+
+            var mapper = mapperConfig.CreateMapper();
+
+            var productsInRangeDto = mapper.Map<List<ProductsInRangeExportDto>>(productsInRange);
 
             var options = new JsonSerializerSettings
             {
@@ -150,7 +191,7 @@ namespace ProductShop
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
 
-            var productsJson = JsonConvert.SerializeObject(productsInRange, options);
+            var productsJson = JsonConvert.SerializeObject(productsInRangeDto, options);
 
             return productsJson;
         }
@@ -158,29 +199,29 @@ namespace ProductShop
         public static string GetSoldProducts(ProductShopContext context)
         {
             var usersWithSales = context.Users
-                .Where(u => u.ProductsSold.Any())
+                .Include(p => p.ProductsSold)
+                .Where(p => p.ProductsSold.Any())
                 .OrderBy(u => u.LastName)
                 .ThenBy(u => u.FirstName)
-                .Select(x => new
-                {
-                    FirstName = x.FirstName,
-                    LastName = x.LastName,
-                    SoldProducts = x.ProductsSold.Select(p => new
-                    {
-                        Name = p.Name,
-                        Price = p.Price,
-                        BuyerFirstName = p.Buyer.FirstName,
-                        BuyerLastName = p.Buyer.LastName
-                    }).ToList()
-                }).ToList();
+                .ToList();
+
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<ProductShopProfile>();
+            });
+
+            var mapper = mapperConfig.CreateMapper();
+
+            var usersWithProductsDto = mapper.Map<List<SoldProductsExportDto.SellerWithProductsDto>>(usersWithSales);
 
             var options = new JsonSerializerSettings
             {
                 Formatting = Formatting.Indented,
-                ContractResolver = new CamelCasePropertyNamesContractResolver()
+                ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                NullValueHandling = NullValueHandling.Ignore
             };
 
-            var usersWithSalesJson = JsonConvert.SerializeObject(usersWithSales, options);
+            var usersWithSalesJson = JsonConvert.SerializeObject(usersWithProductsDto, options);
 
             return usersWithSalesJson;
         }
@@ -188,21 +229,27 @@ namespace ProductShop
         public static string GetCategoriesByProductsCount(ProductShopContext context)
         {
             var categories = context.Categories
+                .Include(cp => cp.CategoryProducts)
+                .ThenInclude(p => p.Product)
                 .OrderByDescending(p => p.CategoryProducts.Count())
-                .Select(x => new
-                {
-                    Category = x.Name,
-                    ProductsCount = x.CategoryProducts.Count(),
-                    AveragePrice = x.CategoryProducts.Any() ? $"{x.CategoryProducts.Average(p => p.Product.Price):F2}" : "0.00",
-                    TotalRevenue = x.CategoryProducts.Any() ? $"{x.CategoryProducts.Sum(p => p.Product.Price):F2}" : "0.00"
-                }).ToList();
+                .ToList();
+
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<ProductShopProfile>();
+            });
+
+            var mapper = mapperConfig.CreateMapper();
+
+            var categoriesDto = mapper.Map<List<CategoryProductExportDto>>(categories);
+
             var options = new JsonSerializerSettings
             {
                 Formatting = Formatting.Indented,
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
 
-            var categoriesJson = JsonConvert.SerializeObject(categories, options);
+            var categoriesJson = JsonConvert.SerializeObject(categoriesDto, options);
 
             return categoriesJson;
         }
@@ -210,30 +257,24 @@ namespace ProductShop
         public static string GetUsersWithProducts(ProductShopContext context)
         {
             var usersWithProducts = context.Users
+                .Include(ps => ps.ProductsSold)
                 .Where(u => u.ProductsSold.Any(p => p.BuyerId != null))
-                .OrderByDescending(u => u.ProductsSold.Count(p => p.BuyerId != null))
-                .Select(u => new
-                {
-                    FisrtName = u.FirstName,
-                    LastName = u.LastName,
-                    Age = u.Age,
-                    SoldProducts = new
-                    {
-                        Count = u.ProductsSold.Count(p => p.BuyerId != null),
-                        Products = u.ProductsSold
-                        .Where(p => p.BuyerId != null)
-                        .Select(p => new
-                        {
-                            Name = p.Name,
-                            Price = p.Price
-                        }).ToList()
-                    }
-                }).ToList();
+                .OrderByDescending(ps => ps.ProductsSold.Count())
+                .ToList();
 
-            var exportData = new
+            var mapperConfig = new MapperConfiguration(cfg =>
             {
-                UserCount = usersWithProducts.Count(),
-                Users = usersWithProducts
+                cfg.AddProfile<ProductShopProfile>();
+            });
+
+            var mapper = mapperConfig.CreateMapper();
+
+            var usersWithProductsDto = mapper.Map<List<UsersAndProductsExportDto.UsersDto>>(usersWithProducts);
+
+            var exportData = new UsersAndProductsExportDto
+            {
+                UsersCount = usersWithProductsDto.Count(),
+                Users = usersWithProductsDto
             };
 
             var settings = new JsonSerializerSettings

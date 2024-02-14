@@ -1,12 +1,10 @@
-﻿using CarDealer.Data;
+﻿using AutoMapper;
+using CarDealer.Data;
+using CarDealer.DTO.Export;
+using CarDealer.DTO.Import;
 using CarDealer.Models;
-using Castle.Core.Resource;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
-using System.IO;
-using System.Security.Claims;
-using System.Text.Json;
 
 namespace CarDealer
 {
@@ -18,28 +16,27 @@ namespace CarDealer
             db.Database.EnsureDeleted();
             db.Database.EnsureCreated();
 
-            //Import Suppliers
+            // Import Suppliers
             var supplierJson = File.ReadAllText(@"..\..\..\Datasets\suppliers.json");
             Console.WriteLine(ImportSuppliers(db, supplierJson));
 
-            //Import Parts
+            // Import Parts
             var partsJson = File.ReadAllText(@"..\..\..\Datasets\parts.json");
             Console.WriteLine(ImportParts(db, partsJson));
 
-            //Import Cars
+            // Import Cars
             var carsJson = File.ReadAllText(@"..\..\..\Datasets\cars.json");
             Console.WriteLine(ImportCars(db, carsJson));
 
-            //Import Customers
+            // Import Customers
             var customersJson = File.ReadAllText(@"..\..\..\Datasets\customers.json");
             Console.WriteLine(ImportCustomers(db, customersJson));
 
-            //Import Sales
+            // Import Sales
             var salesJson = File.ReadAllText(@"..\..\..\Datasets\sales.json");
             Console.WriteLine(ImportSales(db, salesJson));
 
-            // Import PartCars (there was none in the skeleton)
-
+            // Import PartCars(there was none in the skeleton)
             var random = new Random();
 
             var partIds = db.Parts.Select(p => p.Id).Distinct().ToList();
@@ -47,17 +44,25 @@ namespace CarDealer
 
             for (int i = 0; i < 200; i++)
             {
-                var randomPartId = partIds[random.Next(partIds.Count())];
-                var randomCarId = carIds[random.Next(carIds.Count())];
+                var randomPartId = partIds[random.Next(1, partIds.Count() - 1)];
+                var randomCarId = carIds[random.Next(1, carIds.Count() - 1)];
 
-                var newPartCar = new PartCar
+                if (!db.PartCars.Any(pc => pc.PartId == randomPartId
+                   && pc.CarId == randomCarId))
                 {
-                    PartId = randomPartId,
-                    CarId = randomCarId
-                };
+                    var newPartCar = new PartCar
+                    {
+                        PartId = randomPartId,
+                        CarId = randomCarId
+                    };
 
-                db.PartCars.Add(newPartCar);
-                db.SaveChanges();
+                    db.PartCars.Add(newPartCar);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    i--;
+                }
             }
 
             // Export Ordered Customers
@@ -83,7 +88,16 @@ namespace CarDealer
         {
             try
             {
-                var suppliers = JsonConvert.DeserializeObject<List<Supplier>>(inputJson);
+                var mapperConfig = new MapperConfiguration(cfg =>
+                {
+                    cfg.AddProfile<CarDealerProfile>();
+                });
+
+                var mapper = mapperConfig.CreateMapper();
+
+                var supplierDtos = JsonConvert.DeserializeObject<List<SuppliersImportDto>>(inputJson);
+
+                var suppliers = mapper.Map<List<Supplier>>(supplierDtos);
 
                 foreach (var supplier in suppliers)
                 {
@@ -104,7 +118,16 @@ namespace CarDealer
         {
             try
             {
-                var parts = JsonConvert.DeserializeObject<List<Part>>(inputJson);
+                var mappingConfig = new MapperConfiguration(cfg =>
+                {
+                    cfg.AddProfile<CarDealerProfile>();
+                });
+
+                var mapper = mappingConfig.CreateMapper();
+
+                var partsDto = JsonConvert.DeserializeObject<List<PartsImportDto>>(inputJson);
+
+                var parts = mapper.Map<List<Part>>(partsDto);
 
                 foreach (var part in parts)
                 {
@@ -128,7 +151,16 @@ namespace CarDealer
         {
             try
             {
-                var cars = JsonConvert.DeserializeObject<List<Car>>(inputJson);
+                var mapperConfig = new MapperConfiguration(cfg =>
+                {
+                    cfg.AddProfile<CarDealerProfile>();
+                });
+
+                var mapper = mapperConfig.CreateMapper();
+
+                var carsDto = JsonConvert.DeserializeObject<List<CarsImportDto>>(inputJson);
+
+                var cars = mapper.Map<List<Car>>(carsDto);
 
                 foreach (var car in cars)
                 {
@@ -149,7 +181,16 @@ namespace CarDealer
         {
             try
             {
-                var customers = JsonConvert.DeserializeObject<List<Customer>>(inputJson);
+                var mapperConfig = new MapperConfiguration(cfg =>
+                {
+                    cfg.AddProfile<CarDealerProfile>();
+                });
+
+                var mapper = mapperConfig.CreateMapper();
+
+                var customersDto = JsonConvert.DeserializeObject<List<CustomersImportDto>>(inputJson);
+
+                var customers = mapper.Map<List<Customer>>(customersDto);
 
                 foreach (var customer in customers)
                 {
@@ -169,7 +210,16 @@ namespace CarDealer
         {
             try
             {
-                var sales = JsonConvert.DeserializeObject<List<Sale>>(inputJson);
+                var mapperConfig = new MapperConfiguration(cfg =>
+                {
+                    cfg.AddProfile<CarDealerProfile>();
+                });
+
+                var mapper = mapperConfig.CreateMapper();
+
+                var salesDto = JsonConvert.DeserializeObject<List<SalesImportDto>>(inputJson);
+
+                var sales = mapper.Map<List<Sale>>(salesDto);
 
                 foreach (var sale in sales)
                 {
@@ -191,19 +241,24 @@ namespace CarDealer
             var customers = context.Customers
                 .OrderBy(c => c.BirthDate)
                 .ThenBy(c => c.IsYoungDriver)
-                .Select(x => new
-                {
-                    Name = x.Name,
-                    BirthDate = x.BirthDate,
-                    IsYoungDriver = x.IsYoungDriver
-                }).ToList();
+                .ToList();
+
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            });
+
+            var mapper = mapperConfig.CreateMapper();
+
+            var customersDto = mapper.Map<List<CustomersExportDto>>(customers);
 
             var settings = new JsonSerializerSettings
             {
+                DateFormatString = "MM/dd/yyyy",
                 Formatting = Formatting.Indented
             };
 
-            var customersJson = JsonConvert.SerializeObject(customers, settings);
+            var customersJson = JsonConvert.SerializeObject(customersDto, settings);
 
             return customersJson;
         }
@@ -214,20 +269,23 @@ namespace CarDealer
                 .Where(c => c.Make == "Toyota")
                 .OrderBy(m => m.Model)
                 .ThenByDescending(t => t.TravelledDistance)
-                .Select(x => new
-                {
-                    Id = x.Id,
-                    Make = x.Make,
-                    Model = x.Model,
-                    TravelledDistance = x.TravelledDistance
-                }).ToList();
+                .ToList();
+
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            });
+
+            var mapper = mapperConfig.CreateMapper();
+
+            var carsToyotaDto = mapper.Map<List<CarsToyotaExportDto>>(toyotaCars);
 
             var settings = new JsonSerializerSettings
             {
                 Formatting = Formatting.Indented
             };
 
-            var carsJson = JsonConvert.SerializeObject(toyotaCars, settings);
+            var carsJson = JsonConvert.SerializeObject(carsToyotaDto, settings);
 
             return carsJson;
         }
@@ -235,20 +293,25 @@ namespace CarDealer
         public static string GetLocalSuppliers(CarDealerContext context)
         {
             var localSuppliers = context.Suppliers
+                .Include(p => p.Parts)
                 .Where(s => s.IsImporter == false)
-                .Select(x => new
-                {
-                    Id = x.Id,
-                    Name = x.Name,
-                    PartsCount = x.Parts.Count()
-                }).ToList();
+                .ToList();
+
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            });
+
+            var mapper = mapperConfig.CreateMapper();
+
+            var localSuppliersDto = mapper.Map<List<LocalSuppliersExportDto>>(localSuppliers);
 
             var settings = new JsonSerializerSettings
             {
                 Formatting = Formatting.Indented
             };
 
-            var suppliersJson = JsonConvert.SerializeObject(localSuppliers, settings);
+            var suppliersJson = JsonConvert.SerializeObject(localSuppliersDto, settings);
 
             return suppliersJson;
         }
@@ -256,22 +319,20 @@ namespace CarDealer
         public static string GetCarsWithTheirListOfParts(CarDealerContext context)
         {
             var cars = context.Cars
-                .Select(x => new
-                {
-                    car = new
-                    {
-                        Make = x.Make,
-                        Model = x.Model,
-                        TravelledDistance = x.TravelledDistance
-                    },
-                    parts = x.PartCars.Select(p => new
-                    {
-                        Name = p.Part.Name,
-                        Price = p.Part.Price.ToString("F2")
-                    }).ToList()
-                }).ToList();
+                .Include(pc => pc.PartCars)
+                .ThenInclude(p => p.Part)
+                .ToList();
 
-            var carsJson = JsonConvert.SerializeObject(cars, Formatting.Indented);
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            });
+
+            var mapper = mapperConfig.CreateMapper();
+
+            var carsDto = mapper.Map<List<CarsWithPartsExportDto.CarExportDto>>(cars);
+
+            var carsJson = JsonConvert.SerializeObject(carsDto, Formatting.Indented);
 
             return carsJson;
         }
@@ -279,53 +340,58 @@ namespace CarDealer
         public static string GetTotalSalesByCustomer(CarDealerContext context)
         {
             var customers = context.Customers
+                .Include(p => p.Sales)
+                .ThenInclude(c => c.Car)
+                .ThenInclude(pc => pc.PartCars)
+                .ThenInclude(p => p.Part)
                 .Where(c => c.Sales.Any())
-                .Select(c => new
-                {
-                    FullName = c.Name,
-                    BoughtCars = c.Sales.Count(),
-                    TotalSpentMoney = c.Sales
-                        .SelectMany(s => s.Car.PartCars)
-                        .Sum(pc => pc.Part.Price)
-                })
-                .OrderByDescending(c => c.TotalSpentMoney)
-                .ThenByDescending(c => c.BoughtCars)
+                .OrderByDescending(s => s.Sales
+                        .SelectMany(pc => pc.Car.PartCars)
+                        .Sum(p => p.Part.Price))
+                .ThenByDescending(s => s.Sales.Count())
                 .ToList();
+
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            });
+
+            var mapper = mapperConfig.CreateMapper();
+
+            var customersDto = mapper.Map<List<TotalSalesCustomersExportDto>>(customers);
 
             var settings = new JsonSerializerSettings
             {
-                ContractResolver = new DefaultContractResolver
-                {
-                    NamingStrategy = new CamelCaseNamingStrategy()
-                },
                 Formatting = Formatting.Indented
             };
 
-            var customersJson = JsonConvert.SerializeObject(customers, settings);
+            var customersJson = JsonConvert.SerializeObject(customersDto, settings);
 
             return customersJson;
         }
 
         public static string GetSalesWithAppliedDiscount(CarDealerContext context)
         {
-            var cars = context.Sales
-                .Select(x => new
-                {
-                    car = new
-                    {
-                        Make = x.Car.Make,
-                        Model = x.Car.Model,
-                        TravelledDistance = x.Car.TravelledDistance
-                    },
-                    customerName = x.Customer.Name,
-                    Discount = x.Discount,
-                    price = x.Car.PartCars.Sum(pc => pc.Part.Price),
-                    priceWithDiscount = (x.Car.PartCars.Sum(pc => pc.Part.Price) * (1 - (x.Discount / 100))).ToString("F2")
-                }); ;
+            var customers = context.Customers
+                .Include(s => s.Sales)
+                .ThenInclude(c => c.Car)
+                .ThenInclude(pc => pc.PartCars)
+                .ThenInclude(p => p.Part)
+                .Take(10)
+                .ToList();
 
-            var carsJson = JsonConvert.SerializeObject(cars, Formatting.Indented);
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            });
 
-            return carsJson;
+            var mapper = mapperConfig.CreateMapper();
+
+            var carAndCustomerDto = mapper.Map<List<SalesWithDiscountExportDto.SalesWithDiscountDto>>(customers);
+
+            var carAndCustomersJson = JsonConvert.SerializeObject(carAndCustomerDto, Formatting.Indented);
+
+            return carAndCustomersJson;
         }
     }
 }

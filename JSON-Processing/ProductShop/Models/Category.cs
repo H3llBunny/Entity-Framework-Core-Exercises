@@ -1,5 +1,4 @@
-﻿
-namespace ProductShop.Models
+﻿namespace ProductShop.Models
 {
     public class Category
     {
@@ -10,7 +9,7 @@ namespace ProductShop.Models
 
         public int Id { get; set; }
 
-        public string? Name { get; set; }
+        public string Name { get; set; }
 
         public ICollection<CategoryProduct> CategoryProducts { get; set; }
     }

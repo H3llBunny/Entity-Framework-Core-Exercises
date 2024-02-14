@@ -21,7 +21,12 @@
       "Model": "Astra",
       "TravelledDistance": 156191509
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Window seal",
+        "F2": 100.99
+      }
+    ]
   },
   {
     "car": {
@@ -29,7 +34,12 @@
       "Model": "Corsa",
       "TravelledDistance": 347259126
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Right Quarter Glass",
+        "F2": 100.66
+      }
+    ]
   },
   {
     "car": {
@@ -77,7 +87,12 @@
       "Model": "Omega",
       "TravelledDistance": 111313670
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Door seal",
+        "F2": 444.99
+      }
+    ]
   },
   {
     "car": {
@@ -85,7 +100,16 @@
       "Model": "Insignia",
       "TravelledDistance": 168539389
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rocker cover",
+        "F2": 10.99
+      },
+      {
+        "Name": "Resonator",
+        "F2": 106.99
+      }
+    ]
   },
   {
     "car": {
@@ -101,7 +125,12 @@
       "Model": "Astra",
       "TravelledDistance": 349837452
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Catalytic converter",
+        "F2": 540.99
+      }
+    ]
   },
   {
     "car": {
@@ -141,7 +170,12 @@
       "Model": "Corsa",
       "TravelledDistance": 267253567
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Turbocharger",
+        "F2": 0.4
+      }
+    ]
   },
   {
     "car": {
@@ -157,7 +191,12 @@
       "Model": "F20",
       "TravelledDistance": 401291910
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Muffler",
+        "F2": 106.9
+      }
+    ]
   },
   {
     "car": {
@@ -173,7 +212,16 @@
       "Model": "M5 F10",
       "TravelledDistance": 140799461
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Welded assembly",
+        "F2": 1020.99
+      },
+      {
+        "Name": "Coolant hose ",
+        "F2": 150.99
+      }
+    ]
   },
   {
     "car": {
@@ -189,7 +237,12 @@
       "Model": "E88",
       "TravelledDistance": 27453411
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Distributor cap",
+        "F2": 9.99
+      }
+    ]
   },
   {
     "car": {
@@ -205,7 +258,12 @@
       "Model": "1M Coupe",
       "TravelledDistance": 39826890
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Right Side Inner door handle",
+        "F2": 79.99
+      }
+    ]
   },
   {
     "car": {
@@ -213,7 +271,12 @@
       "Model": "X6 M",
       "TravelledDistance": 322292247
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fan blade",
+        "F2": 150.99
+      }
+    ]
   },
   {
     "car": {
@@ -253,7 +316,12 @@
       "Model": "F04",
       "TravelledDistance": 443756363
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Water pump",
+        "F2": 44.93
+      }
+    ]
   },
   {
     "car": {
@@ -269,7 +337,12 @@
       "Model": "X6 M",
       "TravelledDistance": 227443571
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fan belt",
+        "F2": 10.99
+      }
+    ]
   },
   {
     "car": {
@@ -285,7 +358,20 @@
       "Model": "X6 M",
       "TravelledDistance": 183346013
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Hinge",
+        "F2": 11.99
+      },
+      {
+        "Name": "Engine valve",
+        "F2": 49.99
+      },
+      {
+        "Name": "Turbocharger",
+        "F2": 0.4
+      }
+    ]
   },
   {
     "car": {
@@ -301,7 +387,12 @@
       "Model": "F20",
       "TravelledDistance": 171765152
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Piston",
+        "F2": 94.99
+      }
+    ]
   },
   {
     "car": {
@@ -317,7 +408,12 @@
       "Model": "Panda",
       "TravelledDistance": 1591174
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Air blower",
+        "F2": 140.99
+      }
+    ]
   },
   {
     "car": {
@@ -325,7 +421,16 @@
       "Model": "Panda 4x4 Antarctica",
       "TravelledDistance": 501838637
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Front Left Side Window motor",
+        "F2": 56.99
+      },
+      {
+        "Name": "Rear Right Side Door Glass",
+        "F2": 100.9
+      }
+    ]
   },
   {
     "car": {
@@ -341,7 +446,12 @@
       "Model": "Panda 4x4 Antarctica",
       "TravelledDistance": 388951228
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Distributor cap",
+        "F2": 9.99
+      }
+    ]
   },
   {
     "car": {
@@ -397,7 +507,16 @@
       "Model": "Panda 4x4",
       "TravelledDistance": 506281363
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Left Side Door Glass",
+        "F2": 100.66
+      },
+      {
+        "Name": "Valance",
+        "F2": 1002.99
+      }
+    ]
   },
   {
     "car": {
@@ -429,7 +548,16 @@
       "Model": "500 (2007) Abarth 695 Tributo Maserati",
       "TravelledDistance": 255814652
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Crank pulley",
+        "F2": 2.8
+      },
+      {
+        "Name": "Front Right Side Door Glass",
+        "F2": 100.91
+      }
+    ]
   },
   {
     "car": {
@@ -461,7 +589,16 @@
       "Model": "Panda 4x4",
       "TravelledDistance": 507365630
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Timing tape",
+        "F2": 40.9
+      },
+      {
+        "Name": "Door control module",
+        "F2": 421.99
+      }
+    ]
   },
   {
     "car": {
@@ -469,7 +606,12 @@
       "Model": "500 (2007) Abarth 695 Tributo Maserati",
       "TravelledDistance": 250201285
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Center-locking",
+        "F2": 313.99
+      }
+    ]
   },
   {
     "car": {
@@ -477,7 +619,12 @@
       "Model": "Freemont",
       "TravelledDistance": 370538088
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fuel cooler",
+        "F2": 140.99
+      }
+    ]
   },
   {
     "car": {
@@ -485,7 +632,16 @@
       "Model": "500L",
       "TravelledDistance": 294377378
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Cylinder head",
+        "F2": 6.99
+      },
+      {
+        "Name": "Front clip",
+        "F2": 100.0
+      }
+    ]
   },
   {
     "car": {
@@ -493,7 +649,12 @@
       "Model": "A 140",
       "TravelledDistance": 127050841
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Turbocharger",
+        "F2": 0.4
+      }
+    ]
   },
   {
     "car": {
@@ -541,7 +702,16 @@
       "Model": "W211",
       "TravelledDistance": 501021413
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Engine shake damper and vibration absorber",
+        "F2": 100.99
+      },
+      {
+        "Name": "Heat shield",
+        "F2": 10.99
+      }
+    ]
   },
   {
     "car": {
@@ -557,7 +727,12 @@
       "Model": "W212",
       "TravelledDistance": 437173024
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Choke cable",
+        "F2": 130.99
+      }
+    ]
   },
   {
     "car": {
@@ -581,7 +756,20 @@
       "Model": "W202",
       "TravelledDistance": 402675300
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Catalytic converter",
+        "F2": 540.99
+      },
+      {
+        "Name": "Rear Left Side Inner door handle",
+        "F2": 93.99
+      },
+      {
+        "Name": "Clutch assembly",
+        "F2": 120.99
+      }
+    ]
   },
   {
     "car": {
@@ -589,7 +777,12 @@
       "Model": "W211",
       "TravelledDistance": 132956063
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Engine block",
+        "F2": 40.99
+      }
+    ]
   },
   {
     "car": {
@@ -605,7 +798,12 @@
       "Model": "W203",
       "TravelledDistance": 259511953
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Back Door Outer Door Handle",
+        "F2": 43.99
+      }
+    ]
   },
   {
     "car": {
@@ -613,7 +811,12 @@
       "Model": "W211",
       "TravelledDistance": 130475765
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Right Side Door Glass",
+        "F2": 100.9
+      }
+    ]
   },
   {
     "car": {
@@ -629,7 +832,12 @@
       "Model": "W204",
       "TravelledDistance": 134106055
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Windshield",
+        "F2": 100.99
+      }
+    ]
   },
   {
     "car": {
@@ -637,7 +845,12 @@
       "Model": "W124",
       "TravelledDistance": 41606319
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Timing tape",
+        "F2": 40.9
+      }
+    ]
   },
   {
     "car": {
@@ -693,7 +906,16 @@
       "Model": "Taurus",
       "TravelledDistance": 403810025
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Crank case",
+        "F2": 2.93
+      },
+      {
+        "Name": "Air filter",
+        "F2": 200.99
+      }
+    ]
   },
   {
     "car": {
@@ -701,7 +923,12 @@
       "Model": "Fiesta",
       "TravelledDistance": 37085116
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Window motor",
+        "F2": 123.49
+      }
+    ]
   },
   {
     "car": {
@@ -709,7 +936,12 @@
       "Model": "Torino",
       "TravelledDistance": 440155426
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Starter motor",
+        "F2": 0.99
+      }
+    ]
   },
   {
     "car": {
@@ -717,7 +949,12 @@
       "Model": "Pinto",
       "TravelledDistance": 248943927
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Distributor cap",
+        "F2": 9.99
+      }
+    ]
   },
   {
     "car": {
@@ -741,7 +978,12 @@
       "Model": "GT40",
       "TravelledDistance": 300191400
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Grille",
+        "F2": 144.99
+      }
+    ]
   },
   {
     "car": {
@@ -749,7 +991,16 @@
       "Model": "Fiesta",
       "TravelledDistance": 251295244
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Piston",
+        "F2": 94.99
+      },
+      {
+        "Name": "Fuel tank",
+        "F2": 100.98
+      }
+    ]
   },
   {
     "car": {
@@ -805,7 +1056,12 @@
       "Model": "Ranger",
       "TravelledDistance": 293626832
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Right Side Window motor",
+        "F2": 22.99
+      }
+    ]
   },
   {
     "car": {
@@ -829,7 +1085,12 @@
       "Model": "Prius",
       "TravelledDistance": 508864707
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Radiator pressure cap",
+        "F2": 600.99
+      }
+    ]
   },
   {
     "car": {
@@ -837,7 +1098,16 @@
       "Model": "Tacoma",
       "TravelledDistance": 431663130
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Front Right Side Window motor",
+        "F2": 44.99
+      },
+      {
+        "Name": "Exhaust flange gasket",
+        "F2": 130.99
+      }
+    ]
   },
   {
     "car": {
@@ -877,7 +1147,16 @@
       "Model": "Yaris",
       "TravelledDistance": 285031257
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Bonnet/hood",
+        "F2": 1001.34
+      },
+      {
+        "Name": "Fan belt",
+        "F2": 10.99
+      }
+    ]
   },
   {
     "car": {
@@ -909,7 +1188,12 @@
       "Model": "Prius",
       "TravelledDistance": 65891391
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Piston",
+        "F2": 94.99
+      }
+    ]
   },
   {
     "car": {
@@ -917,7 +1201,12 @@
       "Model": "Corolla",
       "TravelledDistance": 172436753
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Left Side Inner door handle",
+        "F2": 93.99
+      }
+    ]
   },
   {
     "car": {
@@ -949,7 +1238,24 @@
       "Model": "Tacoma",
       "TravelledDistance": 147379564
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Left Side Outer door handle",
+        "F2": 120.99
+      },
+      {
+        "Name": "Bonnet/hood",
+        "F2": 1001.34
+      },
+      {
+        "Name": "Front Right Outer door handle",
+        "F2": 999.99
+      },
+      {
+        "Name": "Back Door Outer Door Handle",
+        "F2": 43.99
+      }
+    ]
   },
   {
     "car": {
@@ -957,7 +1263,16 @@
       "Model": "Corolla",
       "TravelledDistance": 485584239
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Front fascia",
+        "F2": 11.99
+      },
+      {
+        "Name": "Crank case",
+        "F2": 2.93
+      }
+    ]
   },
   {
     "car": {
@@ -973,7 +1288,16 @@
       "Model": "Corolla",
       "TravelledDistance": 196587490
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Sunroof Rail",
+        "F2": 100.25
+      },
+      {
+        "Name": "Crankshaft",
+        "F2": 4.99
+      }
+    ]
   },
   {
     "car": {
@@ -981,7 +1305,12 @@
       "Model": "Yaris",
       "TravelledDistance": 439493520
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Water pump",
+        "F2": 44.93
+      }
+    ]
   },
   {
     "car": {
@@ -989,7 +1318,12 @@
       "Model": "Corolla",
       "TravelledDistance": 333412512
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Right Side Window motor",
+        "F2": 22.99
+      }
+    ]
   },
   {
     "car": {
@@ -1029,7 +1363,12 @@
       "Model": "Tacoma",
       "TravelledDistance": 425742267
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Water pump gasket",
+        "F2": 120.29
+      }
+    ]
   },
   {
     "car": {
@@ -1037,7 +1376,12 @@
       "Model": "Prius",
       "TravelledDistance": 424624116
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Clutch shoe",
+        "F2": 10.49
+      }
+    ]
   },
   {
     "car": {
@@ -1045,7 +1389,12 @@
       "Model": "Yaris",
       "TravelledDistance": 17169781
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Valve housing",
+        "F2": 400.99
+      }
+    ]
   },
   {
     "car": {
@@ -1053,7 +1402,16 @@
       "Model": "Prius",
       "TravelledDistance": 332788407
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fan blade",
+        "F2": 150.99
+      },
+      {
+        "Name": "Windshield",
+        "F2": 100.99
+      }
+    ]
   },
   {
     "car": {
@@ -1061,7 +1419,12 @@
       "Model": "Tacoma",
       "TravelledDistance": 89596390
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fuel pressure regulator",
+        "F2": 100.99
+      }
+    ]
   },
   {
     "car": {
@@ -1085,7 +1448,12 @@
       "Model": "Camry Hybrid",
       "TravelledDistance": 193362513
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Piston",
+        "F2": 94.99
+      }
+    ]
   },
   {
     "car": {
@@ -1125,7 +1493,12 @@
       "Model": "Altima",
       "TravelledDistance": 368986707
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Exhaust flange gasket",
+        "F2": 130.99
+      }
+    ]
   },
   {
     "car": {
@@ -1141,7 +1514,12 @@
       "Model": "370Z",
       "TravelledDistance": 59351269
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Steering box",
+        "F2": 103.99
+      }
+    ]
   },
   {
     "car": {
@@ -1181,7 +1559,12 @@
       "Model": "370Z",
       "TravelledDistance": 91596434
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Crank pulley",
+        "F2": 2.8
+      }
+    ]
   },
   {
     "car": {
@@ -1189,7 +1572,12 @@
       "Model": "Altima",
       "TravelledDistance": 457486023
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Water tank",
+        "F2": 100.99
+      }
+    ]
   },
   {
     "car": {
@@ -1213,7 +1601,20 @@
       "Model": "GT-R",
       "TravelledDistance": 197599645
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Right Quarter Glass",
+        "F2": 100.66
+      },
+      {
+        "Name": "Engine block",
+        "F2": 40.99
+      },
+      {
+        "Name": "Exhaust pipe",
+        "F2": 130.99
+      }
+    ]
   },
   {
     "car": {
@@ -1237,7 +1638,12 @@
       "Model": "GT-R",
       "TravelledDistance": 326260222
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Cylinder head",
+        "F2": 6.99
+      }
+    ]
   },
   {
     "car": {
@@ -1245,7 +1651,12 @@
       "Model": "Versa",
       "TravelledDistance": 475666874
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Thermostat",
+        "F2": 1050.99
+      }
+    ]
   },
   {
     "car": {
@@ -1269,7 +1680,12 @@
       "Model": "GT-R",
       "TravelledDistance": 157249056
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Poppet valve",
+        "F2": 88.99
+      }
+    ]
   },
   {
     "car": {
@@ -1293,7 +1709,12 @@
       "Model": "GT-R",
       "TravelledDistance": 274678949
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Front Right Side Window motor",
+        "F2": 44.99
+      }
+    ]
   },
   {
     "car": {
@@ -1317,7 +1738,12 @@
       "Model": "GT-R",
       "TravelledDistance": 125157902
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Water neck",
+        "F2": 900.99
+      }
+    ]
   },
   {
     "car": {
@@ -1333,7 +1759,12 @@
       "Model": "Versa",
       "TravelledDistance": 440899435
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Clutch assembly",
+        "F2": 120.99
+      }
+    ]
   },
   {
     "car": {
@@ -1349,7 +1780,16 @@
       "Model": "Versa",
       "TravelledDistance": 317911903
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fender",
+        "F2": 10.34
+      },
+      {
+        "Name": "Front Right Side Window motor",
+        "F2": 44.99
+      }
+    ]
   },
   {
     "car": {
@@ -1365,7 +1805,12 @@
       "Model": "Haval M4",
       "TravelledDistance": 515523178
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Resonator",
+        "F2": 106.99
+      }
+    ]
   },
   {
     "car": {
@@ -1373,7 +1818,12 @@
       "Model": "H2",
       "TravelledDistance": 438447396
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fan blade",
+        "F2": 150.99
+      }
+    ]
   },
   {
     "car": {
@@ -1421,7 +1871,12 @@
       "Model": "Alaskan",
       "TravelledDistance": 284369351
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Front Left Side Inner door handle",
+        "F2": 77.99
+      }
+    ]
   },
   {
     "car": {
@@ -1437,7 +1892,12 @@
       "Model": "Duster",
       "TravelledDistance": 275222997
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Windshield",
+        "F2": 100.99
+      }
+    ]
   },
   {
     "car": {
@@ -1453,7 +1913,12 @@
       "Model": "Alaskan",
       "TravelledDistance": 305807332
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Exhaust clamp and bracket",
+        "F2": 140.99
+      }
+    ]
   },
   {
     "car": {
@@ -1493,7 +1958,20 @@
       "Model": "Alaskan",
       "TravelledDistance": 303853081
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Water pump pulley",
+        "F2": 150.99
+      },
+      {
+        "Name": "Sunroof Glass",
+        "F2": 205.24
+      },
+      {
+        "Name": "Muffler",
+        "F2": 106.9
+      }
+    ]
   },
   {
     "car": {
@@ -1501,7 +1979,12 @@
       "Model": "Captur",
       "TravelledDistance": 104305182
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Turbocharger",
+        "F2": 0.4
+      }
+    ]
   },
   {
     "car": {
@@ -1525,7 +2008,12 @@
       "Model": "Alaskan",
       "TravelledDistance": 392193253
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fender",
+        "F2": 10.34
+      }
+    ]
   },
   {
     "car": {
@@ -1533,7 +2021,12 @@
       "Model": "Captur",
       "TravelledDistance": 515034479
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fuel tank",
+        "F2": 100.98
+      }
+    ]
   },
   {
     "car": {
@@ -1541,7 +2034,12 @@
       "Model": "Espace",
       "TravelledDistance": 379189144
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Distributor cap",
+        "F2": 9.99
+      }
+    ]
   },
   {
     "car": {
@@ -1549,7 +2047,12 @@
       "Model": "Camaro",
       "TravelledDistance": 140281843
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Front Right Side Window motor",
+        "F2": 44.99
+      }
+    ]
   },
   {
     "car": {
@@ -1573,7 +2076,12 @@
       "Model": "Caprice",
       "TravelledDistance": 401020251
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fuel filter",
+        "F2": 162.99
+      }
+    ]
   },
   {
     "car": {
@@ -1589,7 +2097,12 @@
       "Model": "Camaro",
       "TravelledDistance": 265890224
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Heater",
+        "F2": 82.99
+      }
+    ]
   },
   {
     "car": {
@@ -1613,7 +2126,12 @@
       "Model": "Impala",
       "TravelledDistance": 19486044
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fan belt",
+        "F2": 10.99
+      }
+    ]
   },
   {
     "car": {
@@ -1629,7 +2147,12 @@
       "Model": "Camaro",
       "TravelledDistance": 478411784
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Coolant hose ",
+        "F2": 150.99
+      }
+    ]
   },
   {
     "car": {
@@ -1645,7 +2168,12 @@
       "Model": "Cruze",
       "TravelledDistance": 333261359
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Left Side Window motor",
+        "F2": 144.99
+      }
+    ]
   },
   {
     "car": {
@@ -1661,7 +2189,12 @@
       "Model": "Camaro",
       "TravelledDistance": 354394122
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Crankshaft",
+        "F2": 4.99
+      }
+    ]
   },
   {
     "car": {
@@ -1669,7 +2202,12 @@
       "Model": "Caprice",
       "TravelledDistance": 247321209
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Front Left Side Inner door handle",
+        "F2": 77.99
+      }
+    ]
   },
   {
     "car": {
@@ -1677,7 +2215,16 @@
       "Model": "Cruze",
       "TravelledDistance": 366224374
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Oil pan",
+        "F2": 140.99
+      },
+      {
+        "Name": "Heater",
+        "F2": 82.99
+      }
+    ]
   },
   {
     "car": {
@@ -1685,7 +2232,12 @@
       "Model": "Caprice",
       "TravelledDistance": 338430654
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Water tank",
+        "F2": 100.99
+      }
+    ]
   },
   {
     "car": {
@@ -1693,7 +2245,12 @@
       "Model": "Matiz",
       "TravelledDistance": 274054974
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Right Quarter Glass",
+        "F2": 100.66
+      }
+    ]
   },
   {
     "car": {
@@ -1709,7 +2266,20 @@
       "Model": "Phantom Drophead Coupé",
       "TravelledDistance": 260653592
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fascia",
+        "F2": 100.34
+      },
+      {
+        "Name": "Engine shake damper and vibration absorber",
+        "F2": 100.99
+      },
+      {
+        "Name": "Bonnet/hood",
+        "F2": 1001.34
+      }
+    ]
   },
   {
     "car": {
@@ -1725,7 +2295,12 @@
       "Model": "Ghost",
       "TravelledDistance": 496937828
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Poppet valve",
+        "F2": 88.99
+      }
+    ]
   },
   {
     "car": {
@@ -1741,7 +2316,12 @@
       "Model": "Phantom",
       "TravelledDistance": 327285667
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Water tank",
+        "F2": 100.99
+      }
+    ]
   },
   {
     "car": {
@@ -1805,7 +2385,12 @@
       "Model": "Diablo",
       "TravelledDistance": 379116231
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Crankshaft",
+        "F2": 4.99
+      }
+    ]
   },
   {
     "car": {
@@ -1813,7 +2398,12 @@
       "Model": "Gallardo",
       "TravelledDistance": 437885784
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fuel cooler",
+        "F2": 140.99
+      }
+    ]
   },
   {
     "car": {
@@ -1821,7 +2411,12 @@
       "Model": "Murciélago",
       "TravelledDistance": 499808136
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fan belt",
+        "F2": 10.99
+      }
+    ]
   },
   {
     "car": {
@@ -1829,7 +2424,16 @@
       "Model": "Gallardo",
       "TravelledDistance": 240371960
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Air filter",
+        "F2": 200.99
+      },
+      {
+        "Name": "Cowl screen",
+        "F2": 1500.34
+      }
+    ]
   },
   {
     "car": {
@@ -1877,7 +2481,12 @@
       "Model": "F430",
       "TravelledDistance": 403805820
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Piston",
+        "F2": 94.99
+      }
+    ]
   },
   {
     "car": {
@@ -1885,7 +2494,16 @@
       "Model": "F40",
       "TravelledDistance": 106050998
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Differential clutch",
+        "F2": 120.99
+      },
+      {
+        "Name": "Spoiler",
+        "F2": 3000.99
+      }
+    ]
   },
   {
     "car": {
@@ -1925,7 +2543,16 @@
       "Model": "F40",
       "TravelledDistance": 262060470
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fuel filter",
+        "F2": 162.99
+      },
+      {
+        "Name": "Hinge",
+        "F2": 11.99
+      }
+    ]
   },
   {
     "car": {
@@ -1941,7 +2568,12 @@
       "Model": "F430",
       "TravelledDistance": 235611505
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Front Left Side Door Glass",
+        "F2": 100.92
+      }
+    ]
   },
   {
     "car": {
@@ -1949,7 +2581,12 @@
       "Model": "Daytona",
       "TravelledDistance": 30312194
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Heat shield",
+        "F2": 10.99
+      }
+    ]
   },
   {
     "car": {
@@ -1965,7 +2602,12 @@
       "Model": "250 GTO",
       "TravelledDistance": 496765811
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Sunroof Glass",
+        "F2": 205.24
+      }
+    ]
   },
   {
     "car": {
@@ -1973,7 +2615,12 @@
       "Model": "275",
       "TravelledDistance": 164216748
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Coolant hose ",
+        "F2": 150.99
+      }
+    ]
   },
   {
     "car": {
@@ -2013,7 +2660,12 @@
       "Model": "AR51",
       "TravelledDistance": 452362116
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Piston",
+        "F2": 94.99
+      }
+    ]
   },
   {
     "car": {
@@ -2021,7 +2673,12 @@
       "Model": "Alfetta",
       "TravelledDistance": 227419636
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Clutch assembly",
+        "F2": 120.99
+      }
+    ]
   },
   {
     "car": {
@@ -2029,7 +2686,12 @@
       "Model": "75",
       "TravelledDistance": 338929990
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Radiator pressure cap",
+        "F2": 600.99
+      }
+    ]
   },
   {
     "car": {
@@ -2037,7 +2699,12 @@
       "Model": "AR51",
       "TravelledDistance": 273101528
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Differential clutch",
+        "F2": 120.99
+      }
+    ]
   },
   {
     "car": {
@@ -2045,7 +2712,16 @@
       "Model": "156",
       "TravelledDistance": 434781563
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rocker cover",
+        "F2": 10.99
+      },
+      {
+        "Name": "Rear Left Side Window motor",
+        "F2": 144.99
+      }
+    ]
   },
   {
     "car": {
@@ -2109,7 +2785,12 @@
       "Model": "206",
       "TravelledDistance": 225031436
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Catalytic converter",
+        "F2": 540.99
+      }
+    ]
   },
   {
     "car": {
@@ -2117,7 +2798,12 @@
       "Model": "405",
       "TravelledDistance": 428581244
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Oil pan",
+        "F2": 140.99
+      }
+    ]
   },
   {
     "car": {
@@ -2149,7 +2835,12 @@
       "Model": "308",
       "TravelledDistance": 235475304
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Cowl screen",
+        "F2": 1500.34
+      }
+    ]
   },
   {
     "car": {
@@ -2165,7 +2856,12 @@
       "Model": "306",
       "TravelledDistance": 343442559
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fan belt",
+        "F2": 10.99
+      }
+    ]
   },
   {
     "car": {
@@ -2189,7 +2885,12 @@
       "Model": "306",
       "TravelledDistance": 201912836
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fuel filter",
+        "F2": 162.99
+      }
+    ]
   },
   {
     "car": {
@@ -2197,7 +2898,12 @@
       "Model": "407",
       "TravelledDistance": 422154829
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Right Quarter Glass",
+        "F2": 100.66
+      }
+    ]
   },
   {
     "car": {
@@ -2205,7 +2911,12 @@
       "Model": "206",
       "TravelledDistance": 312468347
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Coolant hose ",
+        "F2": 150.99
+      }
+    ]
   },
   {
     "car": {
@@ -2213,7 +2924,12 @@
       "Model": "407",
       "TravelledDistance": 336906707
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Crankshaft",
+        "F2": 4.99
+      }
+    ]
   },
   {
     "car": {
@@ -2221,7 +2937,12 @@
       "Model": "206",
       "TravelledDistance": 310013429
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Spoiler",
+        "F2": 3000.99
+      }
+    ]
   },
   {
     "car": {
@@ -2229,7 +2950,16 @@
       "Model": "308",
       "TravelledDistance": 454503627
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Crank pulley",
+        "F2": 2.8
+      },
+      {
+        "Name": "Rear Right Side Door Glass",
+        "F2": 100.9
+      }
+    ]
   },
   {
     "car": {
@@ -2285,7 +3015,16 @@
       "Model": "Berlingo",
       "TravelledDistance": 242536078
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Valve cover",
+        "F2": 130.99
+      },
+      {
+        "Name": "Front Left Side Outer door handle",
+        "F2": 999.99
+      }
+    ]
   },
   {
     "car": {
@@ -2301,7 +3040,12 @@
       "Model": "Berlingo",
       "TravelledDistance": 436804201
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Spoiler",
+        "F2": 3000.99
+      }
+    ]
   },
   {
     "car": {
@@ -2309,7 +3053,12 @@
       "Model": "C5",
       "TravelledDistance": 32203443
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Camshaft",
+        "F2": 100.98
+      }
+    ]
   },
   {
     "car": {
@@ -2333,7 +3082,12 @@
       "Model": "Elysée",
       "TravelledDistance": 4120281
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fascia",
+        "F2": 100.34
+      }
+    ]
   },
   {
     "car": {
@@ -2357,7 +3111,12 @@
       "Model": "C5",
       "TravelledDistance": 38829917
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Clutch assembly",
+        "F2": 120.99
+      }
+    ]
   },
   {
     "car": {
@@ -2365,7 +3124,16 @@
       "Model": "C1",
       "TravelledDistance": 447103875
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Harmonic balancer",
+        "F2": 67.99
+      },
+      {
+        "Name": "Differential seal",
+        "F2": 109.99
+      }
+    ]
   },
   {
     "car": {
@@ -2389,7 +3157,12 @@
       "Model": "C4",
       "TravelledDistance": 501689589
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Back Door Outer Door Handle",
+        "F2": 43.99
+      }
+    ]
   },
   {
     "car": {
@@ -2405,7 +3178,12 @@
       "Model": "C5",
       "TravelledDistance": 98486390
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Engine valve",
+        "F2": 49.99
+      }
+    ]
   },
   {
     "car": {
@@ -2413,7 +3191,20 @@
       "Model": "C3",
       "TravelledDistance": 404111136
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Choke cable",
+        "F2": 130.99
+      },
+      {
+        "Name": "Fender",
+        "F2": 10.34
+      },
+      {
+        "Name": "Oil strainer",
+        "F2": 45.29
+      }
+    ]
   },
   {
     "car": {
@@ -2429,7 +3220,12 @@
       "Model": "C1",
       "TravelledDistance": 174494239
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Front Right Side Window motor",
+        "F2": 44.99
+      }
+    ]
   },
   {
     "car": {
@@ -2437,7 +3233,12 @@
       "Model": "C3",
       "TravelledDistance": 486926519
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Poppet valve",
+        "F2": 88.99
+      }
+    ]
   },
   {
     "car": {
@@ -2445,7 +3246,12 @@
       "Model": "Elysée",
       "TravelledDistance": 277281794
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Exhaust flange gasket",
+        "F2": 130.99
+      }
+    ]
   },
   {
     "car": {
@@ -2453,7 +3259,12 @@
       "Model": "C1",
       "TravelledDistance": 130512554
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Transmission pan",
+        "F2": 106.99
+      }
+    ]
   },
   {
     "car": {
@@ -2477,7 +3288,12 @@
       "Model": "C1",
       "TravelledDistance": 339260713
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Steering arm",
+        "F2": 104.99
+      }
+    ]
   },
   {
     "car": {
@@ -2493,7 +3309,12 @@
       "Model": "C1",
       "TravelledDistance": 505029588
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Catalytic converter",
+        "F2": 540.99
+      }
+    ]
   },
   {
     "car": {
@@ -2501,7 +3322,12 @@
       "Model": "C8",
       "TravelledDistance": 309422851
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Oil pan",
+        "F2": 140.99
+      }
+    ]
   },
   {
     "car": {
@@ -2509,7 +3335,16 @@
       "Model": "Toledo",
       "TravelledDistance": 144201918
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Heat shield",
+        "F2": 10.99
+      },
+      {
+        "Name": "Speed reducer",
+        "F2": 14.99
+      }
+    ]
   },
   {
     "car": {
@@ -2517,7 +3352,12 @@
       "Model": "Mii",
       "TravelledDistance": 304944609
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Valance",
+        "F2": 1002.99
+      }
+    ]
   },
   {
     "car": {
@@ -2525,7 +3365,12 @@
       "Model": "Ibiza",
       "TravelledDistance": 333280407
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Right Side Inner door handle",
+        "F2": 79.99
+      }
+    ]
   },
   {
     "car": {
@@ -2533,7 +3378,12 @@
       "Model": "Mii",
       "TravelledDistance": 508783407
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Engine block",
+        "F2": 40.99
+      }
+    ]
   },
   {
     "car": {
@@ -2541,7 +3391,12 @@
       "Model": "Ibiza",
       "TravelledDistance": 182688172
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fuel cooler",
+        "F2": 140.99
+      }
+    ]
   },
   {
     "car": {
@@ -2573,7 +3428,12 @@
       "Model": "Ibiza",
       "TravelledDistance": 197399178
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Transmission pan",
+        "F2": 106.99
+      }
+    ]
   },
   {
     "car": {
@@ -2581,7 +3441,12 @@
       "Model": "Mii",
       "TravelledDistance": 485157233
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fan belt",
+        "F2": 10.99
+      }
+    ]
   },
   {
     "car": {
@@ -2589,7 +3454,12 @@
       "Model": "Toledo",
       "TravelledDistance": 266451047
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Valve stem seal",
+        "F2": 120.99
+      }
+    ]
   },
   {
     "car": {
@@ -2605,7 +3475,12 @@
       "Model": "Toledo",
       "TravelledDistance": 196618703
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Air filter",
+        "F2": 200.99
+      }
+    ]
   },
   {
     "car": {
@@ -2653,7 +3528,12 @@
       "Model": "Citigo",
       "TravelledDistance": 326326638
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Clutch assembly",
+        "F2": 120.99
+      }
+    ]
   },
   {
     "car": {
@@ -2661,7 +3541,12 @@
       "Model": "Citigo",
       "TravelledDistance": 186951373
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Timing tape",
+        "F2": 40.9
+      }
+    ]
   },
   {
     "car": {
@@ -2701,7 +3586,16 @@
       "Model": "Rapid",
       "TravelledDistance": 267561546
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Fuel rail",
+        "F2": 107.99
+      },
+      {
+        "Name": "Rear Right Side Door Glass",
+        "F2": 100.9
+      }
+    ]
   },
   {
     "car": {
@@ -2725,7 +3619,20 @@
       "Model": "Rapid",
       "TravelledDistance": 490651056
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Air filter",
+        "F2": 200.99
+      },
+      {
+        "Name": "Front Right Side Door Glass",
+        "F2": 100.91
+      },
+      {
+        "Name": "Water neck",
+        "F2": 900.99
+      }
+    ]
   },
   {
     "car": {
@@ -2733,7 +3640,12 @@
       "Model": "Rapid Spaceback",
       "TravelledDistance": 371247268
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Differential seal",
+        "F2": 109.99
+      }
+    ]
   },
   {
     "car": {
@@ -2749,7 +3661,12 @@
       "Model": "Logan",
       "TravelledDistance": 71570263
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Timing tape",
+        "F2": 40.9
+      }
+    ]
   },
   {
     "car": {
@@ -2765,7 +3682,16 @@
       "Model": "Sandero",
       "TravelledDistance": 443192096
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Center-locking",
+        "F2": 313.99
+      },
+      {
+        "Name": "Fan blade",
+        "F2": 150.99
+      }
+    ]
   },
   {
     "car": {
@@ -2789,7 +3715,12 @@
       "Model": "Logan",
       "TravelledDistance": 459233576
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Sunroof Rail",
+        "F2": 100.25
+      }
+    ]
   },
   {
     "car": {
@@ -2797,7 +3728,20 @@
       "Model": "Logan",
       "TravelledDistance": 84177042
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Left Side Door Glass",
+        "F2": 100.66
+      },
+      {
+        "Name": "Front Right Side Door Glass",
+        "F2": 100.91
+      },
+      {
+        "Name": "Windshield",
+        "F2": 100.99
+      }
+    ]
   },
   {
     "car": {
@@ -2829,7 +3773,12 @@
       "Model": "Logan",
       "TravelledDistance": 315644424
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Left Side Window motor",
+        "F2": 144.99
+      }
+    ]
   },
   {
     "car": {
@@ -2853,7 +3802,12 @@
       "Model": "Duster",
       "TravelledDistance": 297581436
     },
-    "parts": []
+    "parts": [
+      {
+        "Name": "Rear Left Side Door Glass",
+        "F2": 100.66
+      }
+    ]
   },
   {
     "car": {
