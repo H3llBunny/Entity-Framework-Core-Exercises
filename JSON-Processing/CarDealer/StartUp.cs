@@ -13,7 +13,7 @@ namespace CarDealer
         static void Main(string[] args)
         {
             var db = new CarDealerContext();
-            db.Database.EnsureDeleted();
+            //db.Database.EnsureDeleted();
             db.Database.EnsureCreated();
 
             // Import Suppliers
@@ -35,35 +35,6 @@ namespace CarDealer
             // Import Sales
             var salesJson = File.ReadAllText(@"..\..\..\Datasets\sales.json");
             Console.WriteLine(ImportSales(db, salesJson));
-
-            // Import PartCars(there was none in the skeleton)
-            var random = new Random();
-
-            var partIds = db.Parts.Select(p => p.Id).Distinct().ToList();
-            var carIds = db.Cars.Select(c => c.Id).Distinct().ToList();
-
-            for (int i = 0; i < 200; i++)
-            {
-                var randomPartId = partIds[random.Next(1, partIds.Count() - 1)];
-                var randomCarId = carIds[random.Next(1, carIds.Count() - 1)];
-
-                if (!db.PartCars.Any(pc => pc.PartId == randomPartId
-                   && pc.CarId == randomCarId))
-                {
-                    var newPartCar = new PartCar
-                    {
-                        PartId = randomPartId,
-                        CarId = randomCarId
-                    };
-
-                    db.PartCars.Add(newPartCar);
-                    db.SaveChanges();
-                }
-                else
-                {
-                    i--;
-                }
-            }
 
             // Export Ordered Customers
             File.WriteAllText(@"..\..\..\Datasets\exported-customers.json", GetOrderedCustomers(db));
@@ -160,14 +131,17 @@ namespace CarDealer
 
                 var carsDto = JsonConvert.DeserializeObject<List<CarsImportDto>>(inputJson);
 
-                var cars = mapper.Map<List<Car>>(carsDto);
-
-                foreach (var car in cars)
+                foreach (var carDto in carsDto)
                 {
-                    context.Cars.Add(car);
-                }
+                    carDto.Parts = carDto.Parts
+                        .GroupBy(p => p)
+                        .Select(g => g.First())
+                        .ToList();
 
-                context.SaveChanges();
+                    var car = mapper.Map<Car>(carDto);
+                    context.Cars.Add(car);
+                    context.SaveChanges();
+                }
 
                 return $"Successfully imported cars: {context.Cars.Count()}.";
             }

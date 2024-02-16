@@ -1,4 +1,7 @@
-﻿namespace CarDealer.DTO.Import
+﻿using Newtonsoft.Json;
+using System.Xml.Serialization;
+
+namespace CarDealer.DTO.Import
 {
     public class CarsImportDto
     {
@@ -7,5 +10,8 @@
         public string Model { get; set; }
 
         public long TravelledDistance { get; set; }
+
+        [JsonProperty("partsId")]
+        public List<int> Parts { get; set; }
     }
 }

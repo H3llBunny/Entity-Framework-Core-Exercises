@@ -1,152 +1,152 @@
 [
   {
     "fullName": "Hipolito Lamoreaux",
-    "boughtCars": 6,
-    "spentMoney": 1368.16
+    "boughtCars": 12,
+    "spentMoney": 2736.32
   },
   {
     "fullName": "Cinthia Lasala",
-    "boughtCars": 5,
-    "spentMoney": 1171.98
+    "boughtCars": 10,
+    "spentMoney": 2343.96
   },
   {
     "fullName": "Kristian Engberg",
-    "boughtCars": 3,
-    "spentMoney": 1103.65
+    "boughtCars": 6,
+    "spentMoney": 2207.30
   },
   {
     "fullName": "Garret Capron",
-    "boughtCars": 3,
-    "spentMoney": 792.97
+    "boughtCars": 6,
+    "spentMoney": 1585.94
   },
   {
     "fullName": "Sylvie Mcelravy",
-    "boughtCars": 2,
-    "spentMoney": 540.99
+    "boughtCars": 4,
+    "spentMoney": 1081.98
   },
   {
     "fullName": "Lino Subia",
-    "boughtCars": 2,
-    "spentMoney": 462.89
+    "boughtCars": 4,
+    "spentMoney": 925.78
   },
   {
     "fullName": "Carole Witman",
-    "boughtCars": 2,
-    "spentMoney": 462.89
+    "boughtCars": 4,
+    "spentMoney": 925.78
   },
   {
     "fullName": "Marcelle Griego",
-    "boughtCars": 3,
-    "spentMoney": 327.97
+    "boughtCars": 6,
+    "spentMoney": 655.94
   },
   {
     "fullName": "Emmitt Benally",
-    "boughtCars": 5,
-    "spentMoney": 298.27
+    "boughtCars": 10,
+    "spentMoney": 596.54
   },
   {
     "fullName": "Francis Mckim",
-    "boughtCars": 2,
-    "spentMoney": 251.65
+    "boughtCars": 4,
+    "spentMoney": 503.30
   },
   {
     "fullName": "Carri Knapik",
-    "boughtCars": 4,
-    "spentMoney": 246.88
+    "boughtCars": 8,
+    "spentMoney": 493.76
   },
   {
     "fullName": "Oren Perlman",
-    "boughtCars": 4,
-    "spentMoney": 232.97
+    "boughtCars": 8,
+    "spentMoney": 465.94
   },
   {
     "fullName": "Rico Peer",
-    "boughtCars": 2,
-    "spentMoney": 223.98
+    "boughtCars": 4,
+    "spentMoney": 447.96
   },
   {
     "fullName": "Jimmy Grossi",
-    "boughtCars": 3,
-    "spentMoney": 211.33
+    "boughtCars": 6,
+    "spentMoney": 422.66
   },
   {
     "fullName": "Teddy Hobby",
-    "boughtCars": 5,
-    "spentMoney": 184.98
+    "boughtCars": 10,
+    "spentMoney": 369.96
   },
   {
     "fullName": "Zada Attwood",
-    "boughtCars": 4,
-    "spentMoney": 177.98
+    "boughtCars": 8,
+    "spentMoney": 355.96
   },
   {
     "fullName": "Ann Mcenaney",
-    "boughtCars": 2,
-    "spentMoney": 175.98
+    "boughtCars": 4,
+    "spentMoney": 351.96
   },
   {
     "fullName": "Rema Revelle",
-    "boughtCars": 1,
-    "spentMoney": 144.99
+    "boughtCars": 2,
+    "spentMoney": 289.98
   },
   {
     "fullName": "Louann Holzworth",
-    "boughtCars": 3,
-    "spentMoney": 110.39
+    "boughtCars": 6,
+    "spentMoney": 220.78
   },
   {
     "fullName": "Natalie Poli",
-    "boughtCars": 3,
-    "spentMoney": 106.99
+    "boughtCars": 6,
+    "spentMoney": 213.98
   },
   {
     "fullName": "Audrea Cardinal",
-    "boughtCars": 3,
-    "spentMoney": 106.99
+    "boughtCars": 6,
+    "spentMoney": 213.98
   },
   {
     "fullName": "Faustina Burgher",
-    "boughtCars": 4,
-    "spentMoney": 100.92
+    "boughtCars": 8,
+    "spentMoney": 201.84
   },
   {
     "fullName": "Johnette Derryberry",
-    "boughtCars": 3,
-    "spentMoney": 59.98
+    "boughtCars": 6,
+    "spentMoney": 119.96
   },
   {
     "fullName": "Brett Brickley",
-    "boughtCars": 2,
-    "spentMoney": 55.33
+    "boughtCars": 4,
+    "spentMoney": 110.66
   },
   {
     "fullName": "Daniele Zarate",
-    "boughtCars": 3,
+    "boughtCars": 6,
     "spentMoney": 0.0
   },
   {
     "fullName": "Donnetta Soliz",
-    "boughtCars": 3,
+    "boughtCars": 6,
     "spentMoney": 0.0
   },
   {
     "fullName": "Hai Everton",
-    "boughtCars": 2,
+    "boughtCars": 4,
     "spentMoney": 0.0
   },
   {
     "fullName": "Taina Achenbach",
-    "boughtCars": 2,
+    "boughtCars": 4,
     "spentMoney": 0.0
   },
   {
     "fullName": "Yvonne Mccalla",
-    "boughtCars": 1,
+    "boughtCars": 2,
     "spentMoney": 0.0
   },
   {
     "fullName": "Nisha Markwell",
-    "boughtCars": 1,
+    "boughtCars": 2,
     "spentMoney": 0.0
   }
 ]

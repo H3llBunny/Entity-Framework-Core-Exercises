@@ -23,7 +23,8 @@ namespace CarDealer
             CreateMap<CarsImportDto, Car>()
                 .ForMember(src => src.Make, opt => opt.MapFrom(dto => dto.Make))
                 .ForMember(src => src.Model, opt => opt.MapFrom(dto => dto.Model))
-                .ForMember(src => src.TravelledDistance, opt => opt.MapFrom(dto => dto.TravelledDistance));
+                .ForMember(src => src.TravelledDistance, opt => opt.MapFrom(dto => dto.TravelledDistance))
+                .ForMember(src => src.PartCars, opt => opt.MapFrom(src => src.Parts.Select(p => new PartCar { PartId = p })));
 
             CreateMap<CustomersImportDto, Customer>()
                 .ForMember(src => src.Name, opt => opt.MapFrom(dto => dto.Name))
