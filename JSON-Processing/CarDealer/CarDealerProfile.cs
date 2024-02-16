@@ -37,7 +37,7 @@ namespace CarDealer
                 .ForMember(dest => dest.CustomerId, opt => opt.MapFrom(src => src.CustomerId));
 
             CreateMap<Customer, CustomersExportDto>()
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(srfc => src.Name))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
                 .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDate))
                 .ForMember(dest => dest.IsYoungDriver, opt => opt.MapFrom(src => src.IsYoungDriver));
 
