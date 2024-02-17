@@ -31,9 +31,9 @@ namespace CarDealerXml
                 .ForMember(dest => dest.IsYoungDriver, opt => opt.MapFrom(src => src.IsYoungDriver));
 
             CreateMap<SalesImportDto, Sale>()
-               .ForMember(dest => dest.CarId, opt => opt.MapFrom(src => src.CarId))
-               .ForMember(dest => dest.CustomerId, opt => opt.MapFrom(src => src.CustomerId))
-               .ForMember(dest => dest.Discount, opt => opt.MapFrom(src => src.Discount));
+                .ForMember(dest => dest.CarId, opt => opt.MapFrom(src => src.CarId))
+                .ForMember(dest => dest.CustomerId, opt => opt.MapFrom(src => src.CustomerId))
+                .ForMember(dest => dest.Discount, opt => opt.MapFrom(src => src.Discount));
 
             CreateMap<Car, CarsWithDistanceExportDto>()
                 .ForMember(dest => dest.Make, opt => opt.MapFrom(src => src.Make))
@@ -41,34 +41,34 @@ namespace CarDealerXml
                 .ForMember(dest => dest.TravelledDistance, opt => opt.MapFrom(src => src.TravelledDistance));
 
             CreateMap<Car, BmwCarsExportDto>()
-               .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
-               .ForMember(dest => dest.Model, opt => opt.MapFrom(src => src.Model))
-               .ForMember(dest => dest.TravelledDistance, opt => opt.MapFrom(src => src.TravelledDistance));
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.Model, opt => opt.MapFrom(src => src.Model))
+                .ForMember(dest => dest.TravelledDistance, opt => opt.MapFrom(src => src.TravelledDistance));
 
             CreateMap<Supplier, LocalSuppliersExportDto>()
-               .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
-               .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
-               .ForMember(dest => dest.PartsCount, opt => opt.MapFrom(src => src.Parts.Count()));
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.PartsCount, opt => opt.MapFrom(src => src.Parts.Count()));
 
             CreateMap<Part, CarsAndPartsExportDto.PartDto>()
-               .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
-               .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.Price));
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.Price));
 
             CreateMap<Car, CarsAndPartsExportDto.CarDto>()
-               .ForMember(dest => dest.Make, opt => opt.MapFrom(src => src.Make))
-               .ForMember(dest => dest.Model, opt => opt.MapFrom(src => src.Model))
-               .ForMember(dest => dest.TravelledDistance, opt => opt.MapFrom(src => src.TravelledDistance))
-               .ForMember(dest => dest.Parts, opt => opt.MapFrom(src => src.PartCars.Select(pc => new CarsAndPartsExportDto.PartDto
-               {
-                   Name = pc.Part.Name,
-                   Price = pc.Part.Price
-               })));
+                .ForMember(dest => dest.Make, opt => opt.MapFrom(src => src.Make))
+                .ForMember(dest => dest.Model, opt => opt.MapFrom(src => src.Model))
+                .ForMember(dest => dest.TravelledDistance, opt => opt.MapFrom(src => src.TravelledDistance))
+                .ForMember(dest => dest.Parts, opt => opt.MapFrom(src => src.PartCars.Select(pc => new CarsAndPartsExportDto.PartDto
+                {
+                    Name = pc.Part.Name,
+                    Price = pc.Part.Price
+                })));
 
             CreateMap<Customer, CustomersAndSalesExportDto>()
-              .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
-              .ForMember(dest => dest.BoughtCars, opt => opt.MapFrom(src => src.Sales.Count()))
-              .ForMember(dest => dest.SpendMoney,
-              opt => opt.MapFrom(src => src.Sales.SelectMany(c => c.Car.PartCars).Sum(p => p.Part.Price)));
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.BoughtCars, opt => opt.MapFrom(src => src.Sales.Count()))
+                .ForMember(dest => dest.SpendMoney,
+                opt => opt.MapFrom(src => src.Sales.SelectMany(c => c.Car.PartCars).Sum(p => p.Part.Price)));
 
             CreateMap<Sale, SaleDto>()
                 .ForMember(dest => dest.Car, opt => opt.MapFrom(src => src.Car))
